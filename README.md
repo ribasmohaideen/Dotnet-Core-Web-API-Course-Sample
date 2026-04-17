@@ -1,9 +1,9 @@
-https://img.shields.io/badge/.NET-8.0-blueviolet  
+(https://img.shields.io/badge/.NET-8.0-blueviolet  
 https://img.shields.io/badge/Architecture-4--Tier-success  
 https://img.shields.io/badge/AutoMapper-Enabled-orange  
 https://img.shields.io/badge/EF%20Core-ORM-green  
 https://img.shields.io/badge/License-MIT-lightgrey  
-https://img.shields.io/badge/Status-Active-brightgreen
+https://img.shields.io/badge/Status-Active-brightgreen)
 
 A clean and scalable ASP.NET Core Web API built using a professional 4‑tier architecture:
 
