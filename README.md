@@ -1,4 +1,4 @@
-[# Course](https://img.shields.io/badge/.NET-8.0-blueviolet  
+https://img.shields.io/badge/.NET-8.0-blueviolet  
 https://img.shields.io/badge/Architecture-4--Tier-success  
 https://img.shields.io/badge/AutoMapper-Enabled-orange  
 https://img.shields.io/badge/EF%20Core-ORM-green  
