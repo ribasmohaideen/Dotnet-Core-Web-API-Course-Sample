@@ -1,78 +1,112 @@
-(https://img.shields.io/badge/.NET-8.0-blueviolet  
-https://img.shields.io/badge/Architecture-4--Tier-success  
-https://img.shields.io/badge/AutoMapper-Enabled-orange  
-https://img.shields.io/badge/EF%20Core-ORM-green  
-https://img.shields.io/badge/License-MIT-lightgrey  
-https://img.shields.io/badge/Status-Active-brightgreen)
+# ASP.NET Core 4‑Tier Web API
 
-A clean and scalable ASP.NET Core Web API built using a professional 4‑tier architecture:
+![.NET](https://img.shields.io/badge/.NET-10.0-blueviolet)
+![Architecture](https://img.shields.io/badge/Architecture-4--Tier-success)
+![AutoMapper](https://img.shields.io/badge/AutoMapper-Enabled-orange)
+![EF Core](https://img.shields.io/badge/EF%20Core-ORM-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-API Layer – Controllers, request/response models
+A clean and scalable **ASP.NET Core Web API** built using a professional **4‑tier architecture**.
 
-Service Layer – Business logic, AutoMapper
+---
 
-Repository Layer – Data access abstraction
+## 📐 Architecture Overview
 
-Data Layer – EF Core, DbContext, Entities
+### **API Layer**
+- Controllers  
+- Request/Response Models  
 
-📁 Project Structure
-Code
-/ProjectName
- ├── ProjectName.API              → Controllers, API endpoints
- ├── ProjectName.Core             → Interfaces, DTOs, Entities
- ├── ProjectName.Infrastructure   → Repositories, EF Core, DbContext
- └── ProjectName.Services         → Business logic, AutoMapper profiles
-🧩 Tech Stack
-Component	Technology
-Framework	ASP.NET Core 7 / 8
-Architecture	4‑Tier (API → Service → Repository → Data)
-ORM	Entity Framework Core
-Mapping	AutoMapper
-Docs	Swagger / OpenAPI
-Language	C#
+### **Service Layer**
+- Business Logic  
+- AutoMapper Profiles  
 
-🛠️ Features
-✔️ Repository Pattern
+### **Repository Layer**
+- Data Access Abstraction  
+- Repository Pattern  
 
-✔️ Service Layer Abstraction
+### **Data Layer**
+- EF Core  
+- DbContext  
+- Entities  
 
-✔️ AutoMapper for DTO ↔ Entity mapping
+---
 
-✔️ Clean separation of concerns
+## 📁 Project Structure
 
-✔️ EF Core database operations
+/Dotnet-Core-Web-API-Course-Sample  
+├── Course.API              → Controllers, Views  
+├── Course.Business         → Interfaces, DTOs, Entities  
+├── Course.Infrastructure   → Repositories, EF Core, DbContext  
+└── Course.Domain           → Models, AutoMapper profiles  
 
-✔️ Swagger UI enabled
 
-✔️ Fully testable architecture
 
-⚙️ Setup Instructions
-1️⃣ Clone the repository
-bash
-git clone https://github.com/yourname/yourproject.git
-cd yourproject
-2️⃣ Restore dependencies
-bash
+---
+
+## 🧩 Tech Stack
+
+| Component     | Technology                     |
+|---------------|--------------------------------|
+| Framework     | ASP.NET Core  10             |
+| Architecture  | 4‑Tier (API → Service → Repository → Data) |
+| ORM           | Entity Framework Core          |
+| Mapping       | AutoMapper                     |
+| Docs          | Swagger                        |
+| Language      | C#                             |
+
+---
+
+## 🛠️ Features
+
+✔️ Repository Pattern  
+✔️ Service Layer Abstraction  
+✔️ AutoMapper for DTO ↔ Entity mapping  
+✔️ Clean separation of concerns  
+✔️ EF Core CRUD operations  
+✔️ Swagger UI enabled  
+✔️ Fully testable architecture  
+
+---
+
+## ⚙️ Setup Instructions
+
+### **1️⃣ Clone the repository**
+```
+git clone https://github.com/ribasmohaideen/Dotnet-Core-Web-API-Course-Sample.git
+cd Dotnet-Core-Web-API-Course-Sample
+```
+### **2️⃣ Restore dependencies**
+```
 dotnet restore
-3️⃣ Apply EF Core migrations
-bash
+```
+### **3️⃣ Apply EF Core migrations**
+```
 dotnet ef database update
-4️⃣ Run the API
-bash
+```
+### **4️⃣ Run the API**
+```
 dotnet run
+```
 Swagger will be available at:
+https://localhost/swagger
 
-Code
-https://localhost:5001/swagger
-🌐 API Endpoints (Example: Categories)
-Method	Endpoint	Description
-GET	/api/categories	Get all categories
-GET	/api/categories/{id}	Get category by ID
-POST	/api/categories	Create category
-DELETE	/api/categories/{id}	Delete category
+---
 
-🔄 AutoMapper Configuration
-csharp
+## 🌐 API Endpoints (Categories)
+
+| Method| Endpoint              | Description       |
+|-------|-----------------------|-------------------|
+|GET    | /api/categories	      | Get all categories|
+|GET    | /api/categories/{id}  |	Get category by ID|
+|POST  	| /api/categories       |	Create category   |
+|PUT   	| /api/categories       |	Update category   |
+|DELETE | /api/categories/{id}  |	Delete category   |
+
+---
+
+## 🔄 AutoMapper Configuration  
+```
 public class MappingProfile : Profile
 {
     public MappingProfile()
@@ -81,25 +115,31 @@ public class MappingProfile : Profile
         CreateMap<CategoryCreateDto, Category>();
     }
 }
-🧱 Dependency Injection Setup
-csharp
+```
+
+---
+
+## 🧱 Dependency Injection Setup
+```csharp
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-🎯 Learning Goals
+```
+
+---
+
+## 🎯 Learning Goals
 This project helps you understand:
 
-Multi‑layer enterprise architecture
+✔️ Multi‑layer enterprise architecture  
+✔️ Repository + Service patterns  
+✔️ AutoMapper best practices  
+✔️ DTO‑driven API design  
+✔️ EF Core CRUD operations  
+✔️ Clean dependency injection  
 
-Repository + Service patterns
+---
 
-AutoMapper best practices
 
-DTO‑driven API design
-
-EF Core CRUD operations
-
-Clean dependency injection
-
-📄 License
-MIT License — free for learning and personal use.)
+## 📄 License
+MIT License — free for learning and personal use.
